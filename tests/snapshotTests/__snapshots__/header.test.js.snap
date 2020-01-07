@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+Array [
+  <div
+    className="makeStyles-headerWrapper-1"
+  >
+    <div
+      className="makeStyles-logoTitle-2"
+    >
+      Skipcard
+    </div>
+    <div
+      className="makeStyles-link-3"
+    >
+      Create an event
+    </div>
+  </div>,
+  <div
+    className="makeStyles-headerBufferZone-4"
+  />,
+]
+`;
