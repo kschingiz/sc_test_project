@@ -1,12 +1,10 @@
 import withLayout from "../layouts/layout";
 
-import EmailCapture from "../components/emailCapture";
-
 const Blog = props => {
   return (
     <>
       <h1>First blog page</h1>
-      <EmailCapture></EmailCapture>
+      <span>asdasdasd asdasdasdd asdasdasdas defaultas defaultasd as defaultasdd asdasdasd</span>
     </>
   );
 };
