@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingBar renders correctly 1`] = `
+<div
+  className="makeStyles-loadingScreen-1"
+>
+  <div
+    className="css-0"
+  >
+    <div
+      className="css-1a91y0u"
+    />
+    <div
+      className="css-19gtrp6"
+    />
+    <div
+      className="css-3vuga"
+    />
+    <div
+      className="css-tbu3sb"
+    />
+    <div
+      className="css-se1ybd"
+    />
+  </div>
+</div>
+`;
