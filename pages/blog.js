@@ -39,7 +39,7 @@ const Blog = props => {
       <Typography className={styles.blogTitle} variant="h1">
         {blogPost.title}
       </Typography>
-      <Typography className={styles.blogText}>{blogPost.htmlContent}</Typography>
+      <div dangerouslySetInnerHTML={{ __html: blogPost.htmlContent }} className={styles.blogText}></div>
     </>
   );
 };
