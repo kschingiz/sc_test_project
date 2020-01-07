@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
+import useSWR from "swr";
+import fetcher from "../src/fetcher";
+
 import withLayout from "../layouts/layout";
 
 const useStyles = makeStyles({
@@ -19,26 +22,24 @@ const useStyles = makeStyles({
 });
 
 const Blog = props => {
+  const { data, error } = useSWR("/api/getBlogPost", fetcher);
+
   const styles = useStyles();
 
+  if (error) {
+    return <h3>Failed to fetch blog post, try again later</h3>;
+  }
+  if (!data) {
+    return <h3>Loading...</h3>;
+  }
+
+  const { blogPost } = data;
   return (
     <>
       <Typography className={styles.blogTitle} variant="h1">
-        How to Find Great Speakers That Drive More Attendance
+        {blogPost.title}
       </Typography>
-      <Typography className={styles.blogText}>
-        <p>
-          One of the most important factors in maximizing registration and attendance for a professional event is the
-          speaker lineup.
-        </p>
-        <p>
-          One of the most important factors in maximizing registration and attendance for a professional event is the
-          speaker lineup. But who are the best speakers to invite? You might think that the best option is to find
-          speakers who are known for their engaging and well-delivered presentations. A speaker’s ability to deliver an
-          engaging talk can be a major factor in attendee satisfaction and retention (i.e. coming back for subsequent
-          events).
-        </p>
-      </Typography>
+      <Typography className={styles.blogText}>{blogPost.htmlContent}</Typography>
     </>
   );
 };
