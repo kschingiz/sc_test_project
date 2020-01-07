@@ -11,7 +11,9 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     paddingLeft: "2em",
     paddingRight: "1em",
-    alignItems: "center"
+    alignItems: "center",
+    zIndex: 1000,
+    backgroundColor: "white"
   },
   logoTitle: {
     fontSize: "1.7em",

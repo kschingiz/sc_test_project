@@ -24,8 +24,8 @@ export default function withLayout(BlogPage) {
         <EventBar title="Event Organizer Resources" />
 
         <Container>
-          <Grid container spacing={2} className={styles.gridContainer}>
-            <Grid item xs={8}>
+          <Grid container spacing={2} className={styles.gridContainer} justify="center">
+            <Grid item xs={6}>
               <BlogPage></BlogPage>
             </Grid>
             <Grid item xs={4}>
