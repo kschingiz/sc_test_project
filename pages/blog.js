@@ -2,9 +2,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 
 import useSWR from "swr";
-import fetcher from "../src/fetcher";
 
 import withLayout from "../layouts/layout";
+import fetcher from "../src/fetcher";
+import LoadingBar from "../components/loadingBar";
 
 const useStyles = makeStyles({
   blogTitle: {
@@ -30,7 +31,7 @@ const Blog = props => {
     return <h3>Failed to fetch blog post, try again later</h3>;
   }
   if (!data) {
-    return <h3>Loading...</h3>;
+    return <LoadingBar />;
   }
 
   const { blogPost } = data;
